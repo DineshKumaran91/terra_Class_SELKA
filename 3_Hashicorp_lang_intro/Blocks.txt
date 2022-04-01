@@ -1,0 +1,25 @@
+Terraform Top-Level blocks:
+1,Terraform Settings Block
+2,Provider Block
+3,Resource Block
+4,Input Variables Block
+5,Output Values Block
+6,Local Values Block
+7,Data Sources Block
+8,Modules Block
+
+
+Fundamental Blocks:
+1,Terraform Settings Block
+2,Provider Block
+3,Resource Block
+
+Variable Blocks:
+4,Input Variables Block
+5,Output Values Block
+6,Local Values Block
+
+calling/reference Block:
+7,Data Sources Block
+8,Modules Block
+

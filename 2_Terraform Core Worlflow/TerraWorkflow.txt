@@ -1,0 +1,30 @@
+Terraform Basic commands:
+
+1,Terraform init
+2,Terraform Validate and Terraform fmt
+3,Terraform plan
+4,Terraform apply
+5,Terraform Destroy
+
+These are commands uses to create or destory a infra in cloud or On-premise DC.Should be executed inside the working directories where our TF files are present
+
+
+Terraform init:
+ - uses to create terraform config files
+ - We have initialize the working directory where we having our TF files, which will download the plugins(aws)
+ - also download the providers
+
+Terraform Validate:
+ - Validate the terrform config files to ensure those are syntatically valid
+ - Basically to validate the configuration files written by us
+
+Terraform plan:
+ - Generates the execution plan and show us in commad line itself
+ - the plan will also compare the desired state with existing state file in current drirectory
+
+Terraform apply:
+ - Uses to reach the desired state or deploy a enviroment
+ - Create the new object or update/change in existing environment
+
+Terraform Destroy:
+ - Destroy the entire infra or a single resourse using terraform destroy

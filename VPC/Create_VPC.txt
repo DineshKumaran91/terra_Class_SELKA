@@ -1,0 +1,42 @@
+Public VPC
+1)Navigate to VPC --> Create VPC --> Provide VPC name, CIDR Range--> No IPV6 -->Tags.
+ --> VPC creation will create below services automatically by default:
+    - Route Table
+    - Network ACL
+    - Security Group 
+
+2)Subnet --> Create Subnet --> provide name --> Select our VPC --> Give Availability Zone --> set CIDR
+ 
+3)IGW -> create and attach to VPC
+
+4)Route table --> Create Routetable --> select VPC 
+
+5)Route in RT --> Create route in route table --> put destination and select IGW
+
+6)Associate the subnet --> select the subnet --> save
+
+7)SG -> Create SG --> select VPC
+
+
+Using Terraform:
+
+-->Create 9 Resource Blocks
+1,Create VPC --> https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc
+
+2,Create Subnet --> https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet
+
+3,Create Internet Gateway --> https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/internet_gateway
+
+4,Create Route Table --> https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table
+
+5,Create Route in Route Table for Internet Access
+Associate Route Table with Subnet --> https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table_association
+
+Create Security Group in the VPC with port 80, 22 as inbound open
+Create EC2 Instance in respective new vpc, new subnet created above with a static key pair, associate Security group created earlier
+Create Elastic IP Address and Associate to EC2 Instance
+Use depends_on Resource Meta-Argument attribute when creating Elastic IP
+
+
+
+

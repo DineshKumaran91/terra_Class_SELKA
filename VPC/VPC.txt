@@ -1,0 +1,13 @@
+VPC - Virtual Private Cloud
+
+ - Mainly uses so secure our environment which deployed in public cloud(Logically Isolate from the public cloud network).
+ - We can control network related parameters..Example --> SubnetCreation,CIDR block(IP Range),Route Table and Gateway Config
+ - Each Region has default VPC
+ - Security wise VPC have lot of Layer to protect our product(ACL,Route Table)
+ - We can connect VPC with use of VPN from a On-Premises(through Customer gateway)
+
+Example:
+ - App/Web server can be kept in Public VPC
+ - DB can be kept in Private VPC(so no one can't access the DB from outside)
+ - As default we can create 5 VPC in a region
+

@@ -1,0 +1,9 @@
+Traditional way:
+
+while building a environment it takes minimum 5days 
+Ens : Dev,QA,staging,Production,DR
+
+Probs :
+1,So each environment it take many days to build a complete setup for a client
+2,Scale up and scale down will be difficult
+

@@ -1,0 +1,87 @@
+Understand Terraform Language Basics:(HashiCorp Language)
+1,Blocks
+2,Arguments, Attributes & Meta-Arguments
+3,Identifiers
+4,Comments
+5,Terraform Configuration
+6,Terraform Configuration Syntax
+ - All the Terraform Config files with extention of .tf
+
+
+
+
+Block example:
+
+resource(block type) "aws_instance"(block lables) "ec2demo"(block lables) {
+  ami(Identifiers)= "ami-0c2b8ca1dad447f8a" # Amazon Linux in us-east-1, update as per your region #arguments
+  instance_type(Identifiers,arugument name) = "t2.micro" #arguments value
+}
+
+Top level Block : above example "resource" is top level block
+Block inside Block : "Provisioners" is a example(tags block also a block inside block)
+
+
+
+
+Comments we can write in 3 types:
+
+- single line comments --> #,//
+- Multiline comments --> 
+/* 
+This is exable block
+comment for multiline
+*/
+
+
+
+
+Argument,Attributes and MetaArguments:
+
+https://learn.hashicorp.com/tutorials/terraform/resource?in=terraform/configuration-language
+
+Each resource has it's own arguments and attributes reference documents 
+(example Ec2 Instance)--> https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance#argument-reference
+
+
+
+Arguments:
+ Which configure a particular resource,Each arguments will be having some values.
+Types : Required and optional arguments
+ - Required arguments is must for resource to provision successfully from terraform.
+
+Example:
+ resource "aws_instance" "web" {
+  ami           =
+  instance_type = 
+}
+
+
+
+Attributes:
+ Values exposed by particular resource,reference to a resource with format --> resourcename.resourceblocklablename.attribute_name
+Example: 
+resource "aws_instance" "dev_inst_1" {
+  ami                    = "ami-0d5eff06f840b45e9"
+  instance_type          = "t2.micro"
+  key_name               = "Dinesh1234"
+  subnet_id              = aws_subnet.vpc_dev_public_subnet_1.id
+  vpc_security_group_ids = [aws_security_group.dev_vpc_secgrp.id]
+}
+
+
+Meta-Arguments: https://www.terraform.io/docs/language/meta-arguments/depends_on.html
+Terraform spesific arguments, not cloud provided arguments...Uses to changes the behavior of the resource 
+1,depends-on
+2,for-each
+3,count
+4,provider
+5,lifecycle
+
+
+
+
+
+
+
+
+

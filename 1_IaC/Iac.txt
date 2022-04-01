@@ -1,0 +1,18 @@
+Code the infrastructure objects and deploy the infra..
+Infrastructure as Code (IaC) is the managing and provisioning of infrastructure through code instead of through manual processes.
+Example --> Terraform,CloudFormation
+
+With IaC, configuration files are created that contain your infrastructure specifications, which makes it easier to edit and distribute configurations. It also ensures that you provision the same environment every time.
+
+Advantages:
+1,OneTime work
+2,Re-Use the TF templates for other env's
+3,Quick and fast build (max we can build all the env in 5 days)
+4,Reliable for us to trust
+5,Tracked and Audit if we use Terraform cloud
+
+Benifits:
+1,IaC shows very clear reference of what resource created and their settings(so we no need to navigate to Webconsole to check every time in huge environment)
+2,One time well written template can be used as basis for multiple services, multi regions 
+3, We can create well secured architecture code and re-use them with same secured other env.
+
